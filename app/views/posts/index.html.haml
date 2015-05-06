@@ -1,0 +1,11 @@
+%p#notice= notice
+
+%h1.index-title Blog Posts
+- @posts.each do |post|
+  .post-title
+    %h1
+      = link_to post.title, post
+  %p
+    = post.body
+%br/
+= link_to 'New Post', new_post_path, class: "btn btn-default"
